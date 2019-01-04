@@ -1,0 +1,7 @@
+Dear editors:
+We would like to submit the enclosed manuscript entitled ¡°Robust Feature Selection via L21-Norm Minimization and Maximization¡±, which we wish to be considered for publication in ¡°IEEE Access¡±. No conflict of interest exits in the submission of this manuscript, and manuscript is approved by all authors for publication. I would like to declare on behalf of my co-authors that the work described was original research that has not been published previously, and not under consideration for publication elsewhere, in whole or in part. All the authors listed have approved the manuscript that is enclosed.
+In this work, we propose a robust and effective feature selection algorithm based on L2,1-norm distance metric (L21FS), which is a simple and powerful way to reduce the impact of outliers and is robust to the noise features . I hope this paper is suitable for ¡°IEEE Access¡±.
+We deeply appreciate your consideration of our manuscript, and we look forward to receiving comments from the reviewers. If you have any queries, please don¡¯t hesitate to contact me.
+Thank you and best regards.
+Yours sincerely, 
+Xu Ma 
