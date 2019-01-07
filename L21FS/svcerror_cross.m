@@ -11,7 +11,7 @@ function [ Accuracy ] = svcerror_cross(W,A,d,feaNum )
     A = A(:,select_index);
     
     %% libsvm cross validate
-    Accuracy = svmtrain(d,A,'-v 10 -q');
+    Accuracy = libsvmtrain(d,A,'-v 10 -q');
 
 end
 

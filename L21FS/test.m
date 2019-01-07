@@ -1,4 +1,14 @@
 clear;clc;
+dataset='madelon'
+load ../data/madelon.mat;
+B=[gnd fea];
+feaNum=ceil(0.2*size(B,2));
+rdim=50;
+Data_madelon=instance( B,feaNum,rdim);
+save('Data_madelon','Data_madelon');
+
+
+clear;clc;
 dataset='ORL'
 load ../data/ORL.mat;
 B=[gnd fea];
@@ -45,16 +55,6 @@ feaNum=ceil(0.1*size(B,2));
 rdim=10;
 Data_lung_discrete=instance( B,feaNum,rdim);
 save('Data_lung_discrete','Data_lung_discrete');
-
-clear;clc;
-dataset='madelon'
-load ../data/madelon.mat;
-B=[gnd fea];
-feaNum=ceil(0.2*size(B,2));
-rdim=50;
-Data_madelon=instance( B,feaNum,rdim);
-save('Data_madelon','Data_madelon');
-
 
 clear;clc;
 dataset='usps'

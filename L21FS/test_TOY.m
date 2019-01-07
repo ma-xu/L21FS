@@ -7,7 +7,7 @@ num18 = find(gnd==18);
 num38 = find(gnd==38);
 X = [fea(num18,:);fea(num38,:)];
 Y = [gnd(num18,:);gnd(num38,:)];
-%?иж????
+
 avg = repmat(mean(X,1), size(X,1), 1);
 X = X-avg;
 
