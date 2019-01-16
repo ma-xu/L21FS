@@ -1,4 +1,4 @@
-function [ Data ] = instance( B,feaNum,randSeed )
+function [ Data ] = instance( B,feaNum,randSeed,outratio )
 %B:        the input data, including label+data
 %feaNum:   selected features number
 %randSeed: random seed
@@ -35,6 +35,11 @@ function [ Data ] = instance( B,feaNum,randSeed )
         Ctrain = A(1:indx(i),:);
         Ctrain = [Ctrain;A(indx(i+1)+1:sm,:)];
         dtrain = [d(1:indx(i));d(indx(i+1)+1:sm,:)];
+        
+        if outratio > 0
+            %make noise
+            [ dtrain,Ctrain ] = make_noise( dtrain,Ctrain,outratio);
+        end
         
         % compute and time
         tic

@@ -1,4 +1,4 @@
-function [ Result ] = instance5( B,feaNum )
+function [ Result ] = instance5( B,feaNum,outratio )
 %B:        the input data, including label+data
 %feaNum:   selected features number
  randSeedList=[11;21;31;41;51];
@@ -11,7 +11,7 @@ function [ Result ] = instance5( B,feaNum )
  
  for i =1:size(randSeedList,1)
      randSeed= randSeedList(i,1);
-     [ Data ] = instance( B,feaNum,randSeed );
+     [ Data ] = instance( B,feaNum,randSeed,outratio );
      
      avg_trainCorr_list=[avg_trainCorr_list Data.avg.trainCorr];
      avg_testCorr_list=[avg_testCorr_list Data.avg.testCorr];
