@@ -61,9 +61,9 @@ for i=1:length(rateList)
         
         % compute and time
         tic
-        [ W ] = svc(dtrain,Ctrain,c,rdim);
+        [ W ] = svc(dtrain,Ctrain,c,feaNum);
         thistoc(i,1)=toc;
-        [ Accuracy ] = svcerror( W,Ctrain,dtrain,Ctest,dtest,feaNum );
+        [ Accuracy ] = projecterror( W,Ctrain,dtrain,Ctest,dtest );
         tmpTestCorr(i,1)=Accuracy;
         
     end
@@ -72,6 +72,25 @@ for i=1:length(rateList)
     
     
 end
-testCorrList_selection = testCorrList
-save('testCorrList_selection','testCorrList_selection')
+testCorrList_transformation = testCorrList 
+save('')
+
 rateList
+
+
+function [ accuracy ] = projecterror( W,xtrain,ytrain,xtest,ytest )
+%SVCERROR Summary of this function goes here
+%   Detailed explanation goes here
+    
+    xtrain = xtrain*W;
+    xtest=xtest*W;
+    
+    %% libsvm cross validate
+    model=libsvmtrain(ytrain,xtrain,'-q');
+    [predicted,accuracyList,~]= libsvmpredict(ytest,xtest,model,'-q'); 
+    %err = sum(predicted~=ytest);
+    accuracy = accuracyList(1,1);
+
+
+end
+

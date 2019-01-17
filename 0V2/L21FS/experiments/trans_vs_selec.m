@@ -9,7 +9,7 @@ clear;
 clc;
 addpath("../");
 DataName='Isolet';
-rateList=50:50:600;
+rateList=10:10:300;
 %rateList = 1:25;
 
 datapath=['../../../data/',DataName,'.mat'];
@@ -39,7 +39,7 @@ A=A(r,:);
 %% get the best parameter with  40% data
 %mm=floor(0.4*size(d,1));
 %Result=hibiscus(d(1:mm,:),A(1:mm,:),feaNum,rdim);
-Result=hibiscus(d,A,feaNum,rdim);
+Result=hibiscus(d,A,20,rdim);
 c = Result.Best_c;
 
 testCorrList=[];
@@ -68,11 +68,13 @@ for i=1:length(rateList)
         
     end
     testCorr = sum(tmpTestCorr)/k;
-    testCorrList = [testCorrList testCorr];
+    testCorrList = [testCorrList testCorr]
     
     
 end
-testCorrList
+testCorrList_transformation = testCorrList 
+save('testCorrList_transformation','testCorrList_transformation')
+
 rateList
 
 

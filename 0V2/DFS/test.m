@@ -2,7 +2,7 @@ clear;
 clc;
 DataName={'usps';'madelon';'isolet5';'COIL20';'lung_discrete';'Isolet'};
 %DataName={'colon'};
-rate=20;
+rate=40;
 outratio=0.3;
 DataNum=size(DataName,1);
 for i=1:DataNum

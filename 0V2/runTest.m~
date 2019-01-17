@@ -1,0 +1,41 @@
+function write_error(str)
+end
+
+
+try
+    clear;clc;run('L21FS/experiments/trans_vs_selec111');
+catch ErrorInfo
+    msgText = getReport(ErrorInfo);
+    fid = fopen('error_report.txt','w');
+    fprintf(fid,msgText);
+    fclose(fid);
+end
+try
+    clear;clc;run('L21FS/experiments/selec_vs_trans');
+end
+
+
+try
+    clear;clc;run('UMM/test');
+end
+try
+    clear;clc;run('MCFS/test');
+end
+try
+    clear;clc;run('LS/test');
+end
+try
+    clear;run('L21FS/test');
+end
+try
+    clear;run('DFS/test');
+end
+try
+    clear;run('URAFS/test');
+end
+
+
+
+
+
+
