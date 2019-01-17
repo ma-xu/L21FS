@@ -27,9 +27,9 @@ function [ Data ] = instance( B,feaNum,randSeed,outratio )
     %% get the best parameter with  40% data
     %mm=floor(0.3*size(d,1));
     %Result=hibiscus(d(1:mm,:),A(1:mm,:),feaNum);
-    Result=hibiscus(d,A);
-    alpha = Result.Best_alpha;
-    lambda = Result.Best_lambda;
+%     Result=hibiscus(d,A);
+%     alpha = Result.Best_alpha;
+%     lambda = Result.Best_lambda;
     
     %% cross validation
     k=5;
@@ -51,7 +51,7 @@ function [ Data ] = instance( B,feaNum,randSeed,outratio )
         % compute and time
         tic
         %[~, feature_idx, ~] = UMMFSSC(Ctrain, 2, alpha, feaNum);
-        [~,~,feature_idx]=URAFS(X,4,alpha,alpha,lambda, 20);
+        [~,~,feature_idx]=URAFS(Ctrain,4,1,1,1, 15);
         thistoc(i,1)=toc;
         [ Accuracy ] = svcerror( feature_idx,Ctrain,dtrain,Ctest,dtest);
         tmpTestCorr(i,1)=Accuracy;

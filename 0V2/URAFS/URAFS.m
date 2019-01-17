@@ -7,7 +7,7 @@ function [W,score,indx]=URAFS(X,c,alpha,beta,lambda, NITER)
 %             X: d by n matrix, n samples with d dimensions.
 %             c: the desired cluster number.
 %             alpha, beta, lambda: parameters refer to paper.
-%             NITER£º the number of iteration.
+%             NITERï¿½ï¿½ the number of iteration.
 %       Output:
 %             W: d by c projection matrix.
 %             score: d-dimensional vector, preserves the score for each
@@ -44,7 +44,7 @@ for i1=1:n
 end
 obj(iter)=norm(H*(X'*W-F),'fro')^2+lambda*trace(W'*D_weight*W)+2*alpha*(trace(F'*L*F)+beta*tran);
 if iter>1
-    err = abs(obj(iter-1)-obj(iter))
+    err = abs(obj(iter-1)-obj(iter));
 end
 iter = iter+1;
 end
@@ -60,7 +60,7 @@ score=sum((W.*W),2);
 %View online: http://engine.scichina.com/doi/10.1007/s11432-016-9021-9
 %View Table of Contents:http://engine.scichina.com/publisher/scp/journal/SCIS/60/11
 %Published by the Science China Press
-%% Generalized power iteration method (GPI) for solving min_{W¡®W=I}Tr(W¡¯AW-2W^TB)
+%% Generalized power iteration method (GPI) for solving min_{Wï¿½ï¿½W=I}Tr(Wï¿½ï¿½AW-2W^TB)
 %Input: A as any symmetric matrix with dimension m*m; B as any skew matrix with dimension m*k,(m>=k);
 %In particular, s can be chosen as 1 or 0, which stand for different ways of determining relaxation parameter alpha. 
 %i.e. 1 for the power method and 0 for the eigs function.

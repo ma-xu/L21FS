@@ -1,28 +1,22 @@
 try
-    clear;clc;run('UMM/Noise/test');
+    clear;clc;run('UMM/test');
 end
 try
-    clear;clc;run('MCFS/Noise/test');
+    clear;clc;run('MCFS/test');
 end
 try
-    clear;clc;run('LS/Noise/test');
+    clear;clc;run('LS/test');
 end
 try
-    clear;run('L21FS/Noise/test');
+    clear;run('L21FS/test');
 end
 try
-    clear;run('DFS/Noise/test');
+    clear;run('DFS/test');
 end
 try
-    clear;run('L21FS/Noise/test_20');
+    clear;run('URAFS/test');
 end
-%-------
-try
-    clear;run('L21FS/Noise/test20_c');
-end
-try
-    clear;run('L21FS/Noise/test20_10');
-end
+
 
 
 
