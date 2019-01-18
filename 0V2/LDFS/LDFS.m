@@ -28,7 +28,8 @@ function [W,index] = LDFS(label,X,dim,lambda)
       Sw = Sw + cov( X_i, 1);
       Sb = Sb + length(inx_i)*(mean_Xi-mean_X)'*(mean_Xi-mean_X);
     end
-    [V,D]=eig( inv( Sw )*Sb );
+    [ Sw ] = Rep_rank( Sw );
+    [V,D]=eig( Sw\Sb );
     [D,inx] = sort(diag(real(D)),1,'descend');
     W = V(:,inx(1:dim));
     
@@ -58,8 +59,8 @@ function [W,index] = LDFS(label,X,dim,lambda)
         itear=itear+1;
     end
     [~,index] = sort(sum(abs(W),2),'descend');
-     deltaList
-     objvalList
+     %deltaList
+     %objvalList
 
 end
 
