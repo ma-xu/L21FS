@@ -1,3 +1,4 @@
+%{
 try
     clear;clc;run('L21FS/experiments/trans_vs_selec');
 catch ErrorInfo
@@ -8,8 +9,13 @@ try
 catch ErrorInfo
     write_error('selec_vs_trans',ErrorInfo);   
 end
+%}
 
-
+try
+    clear;clc;run('LS/test');
+catch ErrorInfo
+    write_error('LS',ErrorInfo);
+end
 try
     clear;clc;run('UMM/test');
 catch ErrorInfo
@@ -19,11 +25,6 @@ try
     clear;clc;run('MCFS/test');
 catch ErrorInfo
     write_error('MCFS',ErrorInfo);
-end
-try
-    clear;clc;run('LS/test');
-catch ErrorInfo
-    write_error('LS',ErrorInfo);
 end
 try
     clear;run('L21FS/test');

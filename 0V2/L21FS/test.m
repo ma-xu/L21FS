@@ -1,10 +1,9 @@
 clear;
 clc;
-DataName={'usps';'madelon';'isolet5';'COIL20';'lung_discrete';'Isolet'};
-%DataName={'warpPIE10P';'warpAR10P';'colon';};
-%DataName={'colon';};
+%DataName={'usps';'madelon';'isolet5';'COIL20';'lung_discrete';'Isolet'};
+DataName={'colon';'PCMAC';'lung';'warpPIE10P';'mnist'};
 rate=40;
-outratio=0.3;
+outratio=0;
 DataNum=size(DataName,1);
 for i=1:DataNum
     datapath=['../../data/',DataName{i},'.mat'];
