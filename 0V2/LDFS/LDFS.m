@@ -41,12 +41,12 @@ function [W,index] = LDFS(label,X,dim,lambda)
     objvalList=[objval_old];
     deltaList=[];
     itear=0;
-    lr = 0.01;
+    lr = 0.001;
     while delta>0.0001 && itear<=25
         % div(W) = -2[(SbW)/(W'SwW)]+[(SwW)/(W'SwW)]*[(W'SbW)/(W'SbW)]
         deri = -2*(Sb*W)/(W'*Sw*W);
         deri = deri+[(Sw*W)/(W'*Sw*W)]*[(W'*Sb*W)/(W'*Sb*W)];
-        W = W-lr*deri/norm(deri);
+        W = W-lr*deri/norm(deri,'fro');
         objval_new = -trace(W'*Sw*W)\trace(W'*Sb*W)+lambda*sum(max(abs(W),[],2));
         objvalList =[objvalList;objval_new];
         if objval_new>objval_old
@@ -58,8 +58,8 @@ function [W,index] = LDFS(label,X,dim,lambda)
         itear=itear+1;
     end
     [~,index] = sort(sum(abs(W),2),'descend');
-%     deltaList
-%     objvalList
+     deltaList
+     objvalList
 
 end
 
