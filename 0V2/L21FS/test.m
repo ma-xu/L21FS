@@ -1,8 +1,8 @@
 clear;
 clc;
 DataName={'usps';'madelon';'isolet5';'COIL20';'lung_discrete';'Isolet'};
-%DataName={'colon';'PCMAC';'lung';'warpPIE10P';'mnist'};
-rate=40;
+%DataName={'colon';'lung';'warpPIE10P';'mnist'};
+rate=20;
 outratio=0;
 DataNum=size(DataName,1);
 for i=1:DataNum

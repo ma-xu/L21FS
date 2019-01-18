@@ -1,16 +1,29 @@
+try
+    clear;clc;run('L21FS/test');
+catch ErrorInfo
+    write_error('L21FS',ErrorInfo);
+end
+try
+    clear;clc;run('L21FS/test20_data_big');
+catch ErrorInfo
+    write_error('test20_data_big',ErrorInfo);
+end
+try
+    clear;clc;run('L21FS/test20_noise_big');
+catch ErrorInfo
+    write_error('test20_noise_big',ErrorInfo);
+end
+try
+    clear;clc;run('L21FS/test40_data_big');
+catch ErrorInfo
+    write_error('test40_data_big',ErrorInfo);
+end
+try
+    clear;clc;run('L21FS/test40_noise_big');
+catch ErrorInfo
+    write_error('test40_noise_big',ErrorInfo);
+end
 %{
-try
-    clear;clc;run('L21FS/experiments/trans_vs_selec');
-catch ErrorInfo
-    write_error('trans_vs_selec',ErrorInfo);
-end
-try
-    clear;clc;run('L21FS/experiments/selec_vs_trans');
-catch ErrorInfo
-    write_error('selec_vs_trans',ErrorInfo);   
-end
-%}
-
 try
     clear;clc;run('LS/test');
 catch ErrorInfo
@@ -41,7 +54,7 @@ try
 catch ErrorInfo
     write_error('URAFS',ErrorInfo);
 end
-
+%}
 
 function write_error(str,ErrorInfo)
     msgText = getReport(ErrorInfo);

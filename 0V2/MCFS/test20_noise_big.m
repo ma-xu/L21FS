@@ -2,8 +2,8 @@ clear;
 clc;
 %DataName={'usps';'madelon';'isolet5';'COIL20';'lung_discrete';'Isolet'};
 DataName={'colon';'lung';'warpPIE10P';'mnist'};
-rate=40;
-outratio=0;
+rate=20;
+outratio=0.3;
 DataNum=size(DataName,1);
 for i=1:DataNum
     datapath=['../../data/',DataName{i},'.mat'];
@@ -23,9 +23,8 @@ for i=1:DataNum
     load(datapath);
     B=[gnd fea];
     feaNum=rate;
-    rdim=length(unique(gnd))-1;
     Name = ['Data_',DataName{i}];
-    eval([Name,'=instance5( B,feaNum,rdim,outratio);']);
+    eval([Name,'=instance5( B,feaNum,outratio);']);
     eval(['save(savePath,','''',Name,''');']);
     clearvars -except DataName rate DataNum outratio;
     clc;
