@@ -1,0 +1,15 @@
+[[[LS/test40_big_noise]]]
+Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', '/usr/local/MATLAB/R2018b/toolbox/matlab/lang/run.m', 66)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2018b/toolbox/matlab/lang/run.m',66,0)">line 66</a>)
+LS/test40_big_noise not found.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('runTest', '/home/xuma/Desktop/L21FS/0V2/runTest.m', 31)" style="font-weight:bold">runTest</a> (<a href="matlab: opentoline('/home/xuma/Desktop/L21FS/0V2/runTest.m',31,0)">line 31</a>)
+    clear;clc;run('LS/test40_big_noise');
+ ______________________________
+
+
+
+
+
+
+
+
