@@ -1,26 +1,3 @@
-try
-    clear;clc;run('URAFS/test');
-catch ErrorInfo
-    write_error('URAFS/test',ErrorInfo);
-end
-try
-    clear;clc;run('URAFS/test20_Noise');
-catch ErrorInfo
-    write_error('URAFS/test20_Noise',ErrorInfo);
-end
-try
-    clear;clc;run('URAFS/test40');
-catch ErrorInfo
-    write_error('URAFS/test40',ErrorInfo);
-end
-try
-    clear;clc;run('URAFS/test40_Noise');
-catch ErrorInfo
-    write_error('URAFS/test40_Noise',ErrorInfo);
-end
-
-
-
 %{
 try
     clear;clc;run('LDFS/test20');
@@ -137,7 +114,7 @@ try
 catch ErrorInfo
     write_error('URAFS/test40_big_noise',ErrorInfo);
 end
-%}
+
 
 
 

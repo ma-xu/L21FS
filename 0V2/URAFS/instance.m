@@ -52,6 +52,7 @@ function [ Data ] = instance( B,feaNum,randSeed,outratio )
         tic
         %[~, feature_idx, ~] = UMMFSSC(Ctrain, 2, alpha, feaNum);
         [~,~,feature_idx]=URAFS(Ctrain,4,1,1,1, 15);
+        feature_idx=feature_idx(1:feaNum,:);
         thistoc(i,1)=toc;
         [ Accuracy ] = svcerror( feature_idx,Ctrain,dtrain,Ctest,dtest);
         tmpTestCorr(i,1)=Accuracy;
