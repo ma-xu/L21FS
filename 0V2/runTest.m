@@ -1,3 +1,75 @@
+
+try
+    clear;clc;run('L21FS/test20_dim10');
+catch ErrorInfo
+    write_error('URAFS/test20_dim10',ErrorInfo);
+end
+try
+    clear;clc;run('L21FS/test20_dim20');
+catch ErrorInfo
+    write_error('URAFS/test20_dim20',ErrorInfo);
+end
+try
+    clear;clc;run('L21FS/test20_dim40');
+catch ErrorInfo
+    write_error('URAFS/test20_dim40',ErrorInfo);
+end
+
+
+
+
+try
+    clear;clc;run('L21FS/test40_dim10');
+catch ErrorInfo
+    write_error('URAFS/test40_dim10',ErrorInfo);
+end
+try
+    clear;clc;run('L21FS/test40_dim20');
+catch ErrorInfo
+    write_error('URAFS/test40_dim20',ErrorInfo);
+end
+try
+    clear;clc;run('L21FS/test40_dim40');
+catch ErrorInfo
+    write_error('URAFS/test40_dim40',ErrorInfo);
+end
+
+
+
+
+try
+    clear;clc;run('L21FS/test20_noise_dim10');
+catch ErrorInfo
+    write_error('URAFS/test20_noise_dim10',ErrorInfo);
+end
+try
+    clear;clc;run('L21FS/test20_noise_dim20');
+catch ErrorInfo
+    write_error('URAFS/test20_noise_dim20',ErrorInfo);
+end
+try
+    clear;clc;run('L21FS/test20_noise_dim40');
+catch ErrorInfo
+    write_error('URAFS/test20_noise_dim40',ErrorInfo);
+end
+
+
+try
+    clear;clc;run('L21FS/test40_noise_dim10');
+catch ErrorInfo
+    write_error('URAFS/test40_noise_dim10',ErrorInfo);
+end
+try
+    clear;clc;run('L21FS/test40_noise_dim20');
+catch ErrorInfo
+    write_error('URAFS/test40_noise_dim20',ErrorInfo);
+end
+try
+    clear;clc;run('L21FS/test40_noise_dim40');
+catch ErrorInfo
+    write_error('URAFS/test40_noise_dim40',ErrorInfo);
+end
+%{
 try
     clear;clc;run('URAFS/test');
 catch ErrorInfo
@@ -18,7 +90,7 @@ try
 catch ErrorInfo
     write_error('URAFS/test40_Noise',ErrorInfo);
 end
-
+%}
 
 
 %{
