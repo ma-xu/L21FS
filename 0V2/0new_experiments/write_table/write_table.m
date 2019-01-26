@@ -2,7 +2,7 @@ MethodList = {'LS';'MCFS';'UMM';'URAFS';'LDFS';'DFS';'L21FS';};
 datasetList ={'usps';'madelon';'isolet5';'COIL20';
     'lung_discrete';'Isolet';'colon';'lung';'warpPIE10P';'mnist'} ;
 
-folder = '20Data_0.3Noise';
+folder = '40Data';
 [p_matrix] = p_value(folder,MethodList,datasetList);
 
 txtName = [folder,'.txt'];
