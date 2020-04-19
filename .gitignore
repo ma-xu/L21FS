@@ -2,3 +2,13 @@
 *.mat
 
 !*.mat
+
+*.mat
+
+*.mat
+
+*.mat
+
+0V2/L21FS/20Data_0.3Noise/*.mat
+
+0V2/L21FS/20Data_0.3Noise/Data_colon.mat
